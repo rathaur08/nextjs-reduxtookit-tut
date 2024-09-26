@@ -1,5 +1,5 @@
 const { configureStore } = require("@reduxjs/toolkit");
-
-export const store =  configureStore({
-  reducer:{}
+import reducer from './slice';
+export const store = configureStore({
+  reducer,
 })
