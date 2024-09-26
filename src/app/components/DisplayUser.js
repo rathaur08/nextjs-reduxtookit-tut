@@ -1,11 +1,22 @@
-import React from 'react'
+'use client'
+import { useSelector } from "react-redux"
 
 const DisplayUser = () => {
+  const userData = useSelector((data) => data.users)
+  console.log(userData)
   return (
     <div>
       <h3>Display User List</h3>
-      {/* <input type='text' placeholder='Add' /> */}
-      {/* <button className='' type='button'>Add User</button> */}
+      <hr />
+      {
+        userData.map((item) => {
+          return (
+            <div key={item.id}>
+              <h1>{item.name}</h1>
+            </div>
+          );
+        })
+      }
     </div>
   )
 }

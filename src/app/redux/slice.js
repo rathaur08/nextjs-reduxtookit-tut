@@ -6,7 +6,7 @@ const initialState = {
 }
 
 const Slice = createSlice({
-  name:'addUserSlice',
+  name: 'addUserSlice',
   initialState,
   reducers: {
     addUser: (state, action) => {
@@ -14,7 +14,7 @@ const Slice = createSlice({
         id: nanoid(),
         name: action.payload,
       }
-      state.users.push[data];
+      state.users.push(data);
     }
   }
 })
