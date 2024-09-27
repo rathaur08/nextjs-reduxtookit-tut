@@ -15,10 +15,12 @@ const AddUser = () => {
   return (
     <div>
       <h3>AddUser</h3>
-      <input type='text' onChange={(e) => setName(e.target.value)} placeholder='Add' />
+      <input type='text' onChange={(e) => setName(e.target.value)} placeholder='Add user name' />
       <button onClick={userDispatch} className='' type='button'>Add User</button>
-      <br/>
+      <br /> <br /> <br />
       <Link href='/removeuser'>Remove User Page</Link>
+      <br /> <br />
+      <Link href='/todolist'>Todo Page</Link>
     </div>
   )
 }
