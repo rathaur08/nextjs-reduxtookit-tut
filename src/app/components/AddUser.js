@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import { addUser } from '../redux/slice';
 import { useDispatch } from 'react-redux';
+import Link from 'next/link';
 
 const AddUser = () => {
   const [name, setName] = useState('');
@@ -16,6 +17,8 @@ const AddUser = () => {
       <h3>AddUser</h3>
       <input type='text' onChange={(e) => setName(e.target.value)} placeholder='Add' />
       <button onClick={userDispatch} className='' type='button'>Add User</button>
+      <br/>
+      <Link href='/removeuser'>Remove User Page</Link>
     </div>
   )
 }
