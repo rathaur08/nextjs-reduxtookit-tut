@@ -21,6 +21,10 @@ const AddUser = () => {
       <Link href='/removeuser'>Remove User Page</Link>
       <br /> <br />
       <Link href='/todolist'>Todo Page</Link>
+      <br /> <br />
+      <Link href='/apiusers'>User API Page</Link>
+      
+      
     </div>
   )
 }
