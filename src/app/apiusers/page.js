@@ -7,7 +7,7 @@ import { fetchApiUsers } from "../redux/slice";
 const page = () => {
   const dispatch = useDispatch();
   const apiUserData = useSelector((data) => data.usersData.userAPIData);
-  console.log(apiUserData);
+  // console.log(apiUserData);
 
   useEffect(() => {
     dispatch(fetchApiUsers())

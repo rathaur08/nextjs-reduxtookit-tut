@@ -5,11 +5,11 @@ import { removeUser } from "../redux/slice";
 
 const DisplayUser = () => {
   const userData = useSelector((data) => data.usersData.users)
-  console.log(userData)
+  // console.log(userData)
   const dispatch = useDispatch();
   // const removeUserDispatch = () => {
   //   console.log("remove User Dispatch");
-    // dispatch(removeUser());
+  // dispatch(removeUser());
   // }
 
   return (

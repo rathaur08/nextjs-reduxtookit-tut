@@ -3,7 +3,7 @@ const { createSlice, nanoid, current, createAsyncThunk } = require("@reduxjs/too
 // createSlice
 const initialState = {
   userAPIData: [],
-  users: JSON.parse(localStorage.getItem('users')) ? JSON.parse(localStorage.getItem('users')) : []
+  users: JSON.parse(localStorage.getItem("users")) ? JSON.parse(localStorage.getItem("users")) : []
 }
 
 // GET API Data 
@@ -24,14 +24,15 @@ const Slice = createSlice({
       state.users.push(data);
       let userData = JSON.stringify(current(state.users));
       localStorage.setItem('users', userData);
-      console.log(current(state.users));
+      // console.log(current(state.users));
     },
     removeUser: (state, action) => {
       const data = state.users.filter((item) => {
         return item.id !== action.payload
       })
       state.users = data
-      localStorage.removeItem('users', state.users = data)
+      let userData = JSON.stringify(data);
+      localStorage.setItem('users', userData);
       // console.log(action)
     }
   },
