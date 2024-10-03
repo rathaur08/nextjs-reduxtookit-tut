@@ -15,25 +15,25 @@ const RemoveUser = () => {
     <div className={styles.page}>
       <main className={styles.main}>
         <div>
-          <h2>Remove User Page</h2>
+          <h3>Remove User Page</h3>
           <div>
-            <h3>Display User List</h3>
+            <h5>Display User List</h5>
             <hr />
             {
               userData.map((item) => {
                 return (
                   <div key={item.id}>
-                    <h1>
-                      {item.name}
-                      <button onClick={() => dispatch(removeUser(item.id))} className='' type='button'>Remove User</button>
-                    </h1>
+                    <div className="d-flex justify-content-between mb-2">
+                      <h6>{item.name}</h6>
+                      <button className='btn btn-danger ms-3' onClick={() => dispatch(removeUser(item.id))} type='button'>X</button>
+                    </div>
                   </div>
                 );
               })
             }
           </div>
+          <Link href='/'>GO Home Page</Link>
         </div>
-        <Link href='/'>Home Page</Link>
       </main>
     </div>
   )

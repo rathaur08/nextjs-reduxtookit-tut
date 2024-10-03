@@ -16,18 +16,17 @@ const page = () => {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        {/* apiusers */}
         <h2>User list from API</h2>
         <hr />
-        {/* <button onClick={() => dispatch(fetchApiUsers())}>Load Users</button> */}
+        {/* <button class='btn btn-primary' onClick={() => dispatch(fetchApiUsers())}>Load Users</button> */}
         {
           apiUserData && apiUserData.map((item) => {
             return (
               <div key={item.id}>
-                <p>
-                  {item.name}
-                </p>
-              </div>
+                  <div className="d-flex justify-content-between mb-2">
+                    <h6>{item.name}</h6>
+                  </div>
+                </div>
             );
           })
         }

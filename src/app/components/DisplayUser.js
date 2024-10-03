@@ -20,10 +20,10 @@ const DisplayUser = () => {
         userData.map((item) => {
           return (
             <div key={item.id}>
-              <h1>
-                {item.name}
-                <button onClick={() => dispatch(removeUser(item.id))} className='' type='button'>Remove User</button>
-              </h1>
+              <div className="d-flex justify-content-between mb-2">
+                <h6>{item.name}</h6>
+                <button className='btn btn-danger ms-3' onClick={() => dispatch(removeUser(item.id))} type='button'>X</button>
+              </div>
             </div>
           );
         })
